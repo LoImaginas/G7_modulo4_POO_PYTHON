@@ -1,3 +1,9 @@
+"""        
+Najla Gatica
+Jimena Traipe
+Lolett Llanquinao
+"""
+
 from te import Te 
 #solicitar al usuario ingresar los datos
 #para generar un pedido de té
