@@ -1,7 +1,11 @@
+#Najla Gatica
+#Lolett Llanquinao 
+#Jimena Traipe
+
 from pizza import Pizza
 
 # Paso 5a: Mostrar los valores de los atributos de clase
-print(Pizza.tamano, Pizza.tipos_masa)
+print(f"las pizzas son de tamaño {Pizza.tamano} y su valor es de ${Pizza.precio_fijo}.-")
 
 # Paso 5b: Verificar si "salsa de tomate" está presente en la lista
 print(Pizza.validar_elemento("salsa de tomate", ["salsa de tomate", "salsa bbq"]))
@@ -16,3 +20,4 @@ print(pizza.ingrediente_prot, pizza.ingrediente_veg1, pizza.ingrediente_veg2, pi
 
 # Paso 5e: Mostrar si la clase Pizza es una pizza válida o no
 print(pizza, pizza.es_valida) #<pizza.Pizza object at 0x000002239B1EA030> True
+print(Pizza.es_valida) #AttributeError: type object 'Pizza' has no attribute 'es_valida'˝
