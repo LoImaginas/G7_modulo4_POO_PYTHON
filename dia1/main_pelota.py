@@ -49,4 +49,4 @@ print(pelota_basket.color) #blanco
 #la instancia de una clase, es la creacion de un objeto a traves de una clase
 #que es un atributo de instancia: es una caracteristica o atributo que se le atribuye a traves de un metodo no estatico
 #existen dos tipos de metodos, estaticos y no estaticos
-#la diferencia es que los estaticos no afecta los atributos de la clase y los no estaticos si afecra los atributos de una clase
+#la diferencia es que los metodos estaticos no afectan los atributos de la clase y los metodos no estaticos si afecta los atributos de una clase

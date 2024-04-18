@@ -7,12 +7,9 @@ Nombres:
 -Claudio Mendez
 Fecha:17-04-2024
 
-Este módulo proporciona una implementación de clases para un sistema de membresía. 
+implementación de clases para un sistema de membresía. 
 Incluye una clase abstracta Membresia y sus clases derivadas Gratis, Basica, 
-Familiar, SinConexion y Pro. Cada clase proporciona métodos para cambiar y 
-crear nuevas membresías, así como propiedades para acceder a la información 
-de la membresía actual.
-
+Familiar, SinConexion y Pro. 
 Clases:
     - Membresia: Clase abstracta que define la estructura básica de una membresía.
     - Gratis: Clase que representa una membresía gratuita con opciones limitadas.

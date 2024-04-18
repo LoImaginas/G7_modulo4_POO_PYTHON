@@ -1,25 +1,41 @@
 from medicamento import Medicamento
-#istancia de la clase o creacion de un objeto 
-paracetamol = Medicamento()
+
+#instancia de la clase o creacion de un objeto
+paracetamol  = Medicamento()
 aspirina = Medicamento()
 
-print(paracetamol.descuento) #0.05
-print(aspirina.descuento) #0.05
+print(paracetamol.descuento)
+print(aspirina.descuento)
 
+#Modificacion del estado de un objeto
 paracetamol.descuento = 0.06
-print(paracetamol.descuento) #0.06
-print(aspirina.descuento) #0.05
 
-    
-precio = int(input("ingrese el precio a validar >"))
+print(paracetamol.descuento)
+print(aspirina.descuento)
+
+Medicamento.descuento = 0.04
+ibuprofeno = Medicamento()
+print(ibuprofeno.descuento)
+
+precio = int(input("Ingrese el precio a validar > "))
 #llamado a un metodo estatico
 es_valido = Medicamento.validar_mayor_a_cero(precio)
+
 if es_valido:
-    print("el precio ingresado es valido")#2000 #el precio ingresado es valido
+    print("El precio ingresado es valido")
 else:
-    print("el precio ingresado no es valido")   
-print("")    
-if paracetamol.IVA == aspirina.IVA and paracetamol.descuento == aspirina.descuento:    
-        print("Todas las instancias(objetos) tienen las mismas valores de IVA y descuento")
-        print("el valor del iVA es", Medicamento.IVA) #el valor del iVA es 0.18
-        print("El valor de descunto es", Medicamento.descuento)  #El valor de descunto es 0.05
+    print("El precio ingresado NO es valido")
+
+print(paracetamol.descuento, aspirina.descuento)
+
+if paracetamol.IVA == aspirina.IVA and paracetamol.descuento == aspirina.descuento:
+    print("Todas las instancias(objetos), tienen los mismmos valores de IVA y descuento")
+    print("El valor del IVA es", Medicamento.IVA)
+    print("El valor de descuento es", Medicamento.descuento)
+
+Medicamento.IVA = 0.19
+#ibuprofeno.modificar_atributo()
+print(ibuprofeno.IVA)
+print(aspirina.IVA)
+
+print(paracetamol.descuento, aspirina.descuento,ibuprofeno.descuento)

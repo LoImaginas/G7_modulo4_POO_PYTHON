@@ -23,7 +23,7 @@ class Pelota():
     def setPassword(self,password):
         self.__password = password
 
-    #getter
+    #getter  #trabajar los atributos de manera individual
     @property
     def color(self):
         return self.__color
