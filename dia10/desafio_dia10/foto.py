@@ -6,7 +6,7 @@ Claudio Mendez
 """
 
 
-from error import DimensionErrorException
+from dia10.desafio_dia10.error import DimensionErrorException
 class Foto():
     MAX = 2500
 
