@@ -6,7 +6,7 @@ Claudio Mendez
 """
 
 
-from dia10.desafio_dia10.error import DimensionErrorException
+from error import DimensionErrorException
 class Foto():
     MAX = 2500
 
@@ -21,11 +21,9 @@ class Foto():
 
     @ancho.setter
     def ancho(self, ancho) -> None:
-        try:
-            if ancho >= 1 and ancho <= Foto.MAX:
+            if not (1 <= ancho <= Foto.MAX):    
+                raise DimensionErrorException(f'error: El ancho no puede ser mayor a {Foto.MAX}')  
                 self.__ancho = ancho
-        except Exception as error:
-            raise DimensionErrorException(f'error: El ancho no puede ser mayor a {Foto.MAX}')  
 
     @property
     def alto(self) -> int:
@@ -33,10 +31,14 @@ class Foto():
 
     @alto.setter
     def alto(self, alto) -> None:
-        try:
-            self.__alto = alto
-        except:
-            pass
+        if not (1 <= alto <= Foto.MAX):    
+                raise DimensionErrorException(f'error: El alto no puede ser mayor a {Foto.MAX}', alto, Foto.MAX)  
+                self.__alto = alto
+            
 foto_1 = Foto(2000,2000, "https://...") 
-print(foto_1.ancho)
-foto_1.ancho = 2600 #setter del ancho    
+print(foto_1.ancho)  #2000
+
+try:
+    foto_1.ancho = 2600  #  setter del ancho  Esto lanzará una excepción
+except DimensionErrorException as e:
+    print(e)  # error: El ancho no puede ser mayor a 2500
