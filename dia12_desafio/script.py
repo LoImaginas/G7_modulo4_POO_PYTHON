@@ -1,6 +1,3 @@
-#claudio Mendez
-#
-
 from usuario import Usuario
 from datetime import datetime
 import json
